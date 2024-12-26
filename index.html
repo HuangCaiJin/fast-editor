@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast-Editor</title>
+    <link rel="stylesheet" href="./quill.snow.css">
+    <script src="./quill.js"></script>
+</head>
+
+<body>
+    <div id="editor" style="min-height: 500px;"></div>
+    <script>
+
+        /**
+        initEditor({
+            callback:(html:any) => {
+                当富文本框内容变化后都会到这里来，回调变化后的html字符串
+            },
+            element: 元素选择器字符串,
+            content: 富文本的默认内容(这里需要注意的是quill不支持div标签),
+            upload: (file: any) => {
+                可选参数，自定图片上传，upload函数回调一个File对象，需要返回图片链接
+            }
+
+        })
+        */
+
+        initEditor({
+            callback: (html) => {
+                console.log(html)
+                
+            },
+            element: `#editor`,
+            content: "test",
+            // upload: (file) => {
+            //     return new Promise(async (resolve, reject) => {
+            //         let formData = new FormData();
+            //         formData.append("file", file, file.name);
+            //         let data: any = await uploadFile(formData)
+            //         let result = data as ApiResponseData<string[]>
+            //         if (result.code == 0) {
+            //             resolve(result.data[0])
+            //         }
+            //     })
+            // }
+        })
+
+        
+    </script>
+</body>
+
+</html>
