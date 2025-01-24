@@ -7,6 +7,8 @@
     <title>Fast-Editor</title>
     <link rel="stylesheet" href="./quill.snow.css">
     <script src="./quill.js"></script>
+    <script src="./image-resize.min.js"></script>
+	<script src="./quill.htmlEditButton.min.js"></script>
 </head>
 
 <body>
@@ -27,25 +29,82 @@
         })
         */
 
-        initEditor({
-            callback: (html) => {
-                console.log(html)
-                
-            },
-            element: `#editor`,
-            content: "test",
-            // upload: (file) => {
-            //     return new Promise(async (resolve, reject) => {
-            //         let formData = new FormData();
-            //         formData.append("file", file, file.name);
-            //         let data: any = await uploadFile(formData)
-            //         let result = data as ApiResponseData<string[]>
-            //         if (result.code == 0) {
-            //             resolve(result.data[0])
-            //         }
-            //     })
-            // }
-        })
+        // window.initEditor({
+		// 		callback: (html: any) => {
+		// 			// console.log(html);
+		// 			languages.value[item].content = html;
+		// 		},
+		// 		element: `#editor_${item}`,
+		// 		content: languages.value[item].content,
+		// 		upload: (file: any) => {
+		// 			return new Promise(async (resolve, reject) => {
+		// 				async function* waitPlay(file: any) {
+		// 					// 打开弹框
+		// 					isShowDialog.value = true
+		// 					yield 1
+		// 					uploadload.value = true
+		// 					try {
+								
+		// 						let formData = new FormData();
+		// 						formData.append('file', file, file.name);
+		// 						let data: any = await uploadFile(formData);
+		// 						let result = data as ApiResponseData<string[]>;
+		// 						if (result.code == 0) {
+		// 							console.log(imgWidth.value)
+		// 							resolve({
+		// 								url: result.data[0],
+		// 								width: imgWidth.value,
+		// 								height:imgHeight.value
+		// 							});
+		// 						}
+		// 					} catch (err) { console.log(err) }
+		// 					uploadload.value = false
+		// 					isShowDialog.value = false
+		// 					yield 2
+		// 				}
+
+		// 				controller = waitPlay(file)
+		// 				controller.next()
+		// 			});
+		// 		},
+		// 		video: async (file: any) => {
+		// 			return new Promise(async (resolve, reject) => {
+		// 				async function* waitPlay(file: any) {
+		// 					// 打开弹框
+		// 					isShowDialog.value = true
+		// 					yield 1
+		// 					uploadload.value = true
+		// 					try {
+								
+		// 						let formData = new FormData();
+		// 						formData.append('file', file, file.name);
+		// 						let data: any = await uploadFile(formData);
+		// 						let result = data as ApiResponseData<string[]>;
+		// 						if (result.code == 0) {
+		// 							console.log(imgWidth.value)
+		// 							resolve({
+		// 								url: result.data[0],
+		// 								width: imgWidth.value,
+		// 								height:imgHeight.value
+		// 							});
+		// 						}
+		// 					} catch (err) { console.log(err) }
+		// 					uploadload.value = false
+		// 					isShowDialog.value = false
+		// 					yield 2
+		// 				}
+
+		// 				controller = waitPlay(file)
+		// 				controller.next()
+
+		// 				// resolve({
+		// 				// 	width:"300px",
+		// 				// 	height:"auto"
+		// 				// })
+		// 			});
+					
+		// 		}
+		// 	});
 
         
     </script>
